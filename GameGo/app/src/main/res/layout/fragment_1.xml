@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/btn_star_big_off"
+        android:drawableTint="#FFFFFF"
+        android:onClick="levelDown"
+        android:text="Легкая"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/fragment1"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/btn_star_big_off"
+        android:drawableTint="#04FFFF"
+        android:onClick="levelUp"
+        android:text="Сложная"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@+id/fragment1"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        android:layout_weight="1"
+        android:buttonTint="#081760"
+        android:checked="false"
+        android:drawableTint="#081760"
+        android:onClick="onIslandsClick"
+        android:layout_marginBottom="50dp"
+        android:text="Использовать островки"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@+id/fragment1"
+        app:layout_constraintStart_toStartOf="@+id/fragment1"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="303dp"
+        android:layout_height="175dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="@+id/fragment1"
+        app:layout_constraintStart_toStartOf="@+id/fragment1"
+        app:layout_constraintTop_toTopOf="@+id/fragment1">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:buttonTint="#081760"
+            android:checked="false"
+            android:onClick="onTen"
+            android:text="       Размер поля:      10 x 10"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="@+id/fragment1"
+            app:layout_constraintStart_toStartOf="@+id/fragment1"
+            app:layout_constraintTop_toTopOf="@+id/fragment1" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#081760"
+            android:onClick="onFif"
+            android:text="       Размер поля:      15 x 15"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/radioButton3"
+            app:layout_constraintEnd_toEndOf="@+id/fragment1"
+            app:layout_constraintStart_toStartOf="@+id/fragment1"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#081760"
+            android:onClick="onTwen"
+            android:text="       Размер поля:      20 x 20"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="@+id/fragment1"
+            app:layout_constraintStart_toStartOf="@+id/fragment1" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/fragment1"
+        android:layout_width="300dp"
+        android:layout_height="440dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="106dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="4dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:backgroundTint="#021065"
+            android:onClick="onExit"
+            android:tint="#FFFFFF"
+            app:srcCompat="@drawable/exit_ic" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="245dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Settings"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="139dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="385dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="338dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

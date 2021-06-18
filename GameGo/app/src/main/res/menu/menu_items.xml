@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/data"
+        android:onClick="onData"
+        android:orderInCategory="1"
+        android:title="Data"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="2"
+        android:title="@string/Settings"
+        app:showAsAction="always"
+        android:icon="@drawable/settings_ic"
+        />
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/help_ic"
+        android:onClick="onHelp"
+        android:orderInCategory="3"
+        android:title="@string/Help"
+        app:showAsAction="always" />
+
+</menu>

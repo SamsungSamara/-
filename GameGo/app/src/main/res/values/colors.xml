@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#1C2645</color>
+    <color name="purple_500">#1C2645</color>
+    <color name="purple_700">#1C2345</color>
+    <color name="teal_200">#0A1965</color>
+    <color name="teal_700">#0A1965</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background_color">#595959</color>
+    <color name="highlight_color">#0E3FB6</color>
+    <color name="shadow_color">#AA000000</color>
+    <color name="player1_color">#FFFFFFFF</color>
+    <color name="player2_color">#FF000000</color>
+    <color name="island_paint">#00E0FF</color>
+    <color name="grid_paint">#FFFFFF</color>
+
+</resources>

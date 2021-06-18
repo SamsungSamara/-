@@ -1,0 +1,24 @@
+﻿<resources>
+    <string name="app_name">ИГРА ГО</string>
+    <string name="YourTurn">Ваш ход</string>
+    <string name="Draw">Ничья</string>
+    <string name="ComputerThinks">Компьютер думает</string>
+    <string name="YouWon">Вы выиграли</string>
+    <string name="YouLost">Вы проиграли</string>
+    <string name="NewGame">Новая</string>
+    <string name="MoveBack">Отмена</string>
+    <string name="TurnPlayer1">Ход 1 игрока</string>
+    <string name="TurnPlayer2">Ход 2 игрока</string>
+    <string name="WinPlayer1">Выиграл 1 игрок</string>
+    <string name="WinPlayer2">Выиграл 2 игрок</string>
+    <string name="PlayerVsPlayer">Вы играете против другого игрока</string>
+    <string name="PlayerVsComputer">Вы играете против компьютера</string>
+    <string name="Settings">Настройки</string>
+    <string name="Help">Справка</string>
+    <string name="GameResult">Результат игры</string>
+    <string name="Black">Черный</string>
+    <string name="White">Белый</string>
+    <string name="HelpText">Чтобы играть с другим игроком еще раз нажмите кнопку \"Новая\".\nДля изменения настроек нажмите \"Меню\" - \"Настройки\".\nДля отмены последнего хода нажмите кнопку \"Отмена\".</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
