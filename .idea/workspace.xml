@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd62f74f-a604-4af1-9d4e-b15c416de3cb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/BoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/BoardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/ComputerMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/ComputerMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/Fragment1.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/Fragment1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/Fragment3.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/Fragment3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameGo/app/src/main/java/com/example/gamego/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameGo/app/src/main/res/layout/fragment_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameGo/app/src/main/res/layout/fragment_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameGo/app/src/main/res/layout/fragment_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameGo/app/src/main/res/layout/fragment_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameGo/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameGo/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1uCAlLsJFBHVJYjq1hhZNgqKs2h" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GameGo - Copy" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd62f74f-a604-4af1-9d4e-b15c416de3cb" name="Default Changelist" comment="" />
+      <created>1624159346231</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624159346231</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="450" y="214" key="FileChooserDialogImpl" timestamp="1624159505255">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="450" y="214" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1624159505255" />
+  </component>
+</project>

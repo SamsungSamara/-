@@ -130,7 +130,7 @@ public class BoardView extends View implements Runnable {
 // Ширина и высота экрана
         int w = this.getWidth(), h = this.getHeight();
         // Добавим нажали в отладочную информацию
-        Util.debug("нажали");
+        // Util.debug("нажали");
 // Размер квадратной доски с полями
         float boardSize = 0.95f * Math.min(w, h);
 // Размер клетки
@@ -138,7 +138,7 @@ public class BoardView extends View implements Runnable {
         // Координата X левого верхнего угла
         float offsetX = (w - boardSize) / 2;
 // Координата Y левого верхнего угла
-       // float offsetY = MainActivity.USE_OLD_DESIGN ? (h - boardSize) / 2 : 0;
+        // float offsetY = MainActivity.USE_OLD_DESIGN ? (h - boardSize) / 2 : 0;
         float offsetY =  (h - boardSize)/2;
 
 // Если использовать старый дизайн
@@ -165,25 +165,25 @@ public class BoardView extends View implements Runnable {
 // Если нажали за пределами поля или есть победитель
         if (touchX < 0 || touchX >= CELL_COUNT || touchY < 0 || touchY >= CELL_COUNT || getWinner() != 0) {
             // Добавим нажали за пределы поля в отладочную информацию
-            Util.debug("Нажали за пределами поля.");
+            //Util.debug("Нажали за пределами поля.");
 // выходим
             return;
         }
 // Ход
         Point move = getDebugMove(new Point(touchX, touchY));
         // Добавим номер клетки в отладочную информацию
-        Util.debug("Клетка " + move.x + " " + move.y);
+        // Util.debug("Клетка " + move.x + " " + move.y);
 // Если клетка касания не пустая
         if (!isFreeCell(move)) {
             // Добавим клетка не пустая в отладочную информацию
-            Util.debug("Клетка не пустая");
+            //  Util.debug("Клетка не пустая");
             // Выходим
             return;
         }
 // Если есть победитель
         if (getWinner() != 0) {
             // Добавим игра закончена в отладочную информацию
-            Util.debug("Игра уже закончена");
+            //Util.debug("Игра уже закончена");
 // Выходим
             return;
         }
@@ -323,7 +323,7 @@ public class BoardView extends View implements Runnable {
             Drawable d = getResources().getDrawable(R.drawable.blue_gradient, null);
             d.setBounds(0, 0, this.getWidth(), this.getHeight());
             d.draw(canvas);
-           // canvas.drawColor(getResources().getColor(R.color.background_color));
+            // canvas.drawColor(getResources().getColor(R.color.background_color));
 // Ширина и высота экрана
             int w = this.getWidth(), h = this.getHeight();
 // Размер квадратной доски с клетками
@@ -337,7 +337,7 @@ public class BoardView extends View implements Runnable {
 // Координата X левого верхнего угла
             float offsetX = (w - boardSize) / 2;
 // Координата Y левого верхнего угла
-          //  float offsetY = MainActivity.USE_OLD_DESIGN ? (h - boardSize) / 2 : 0;
+            //  float offsetY = MainActivity.USE_OLD_DESIGN ? (h - boardSize) / 2 : 0;
             float offsetY =  (h - boardSize) / 2;
             // Цвет для острова
             Paint islandPaint = new Paint();
@@ -400,21 +400,20 @@ public class BoardView extends View implements Runnable {
                 canvas.drawLine(offsetX, offsetY + k * cellSize + cellSize2, offsetX + boardSize, offsetY + k * cellSize + cellSize2, gridPaint);
             }
 
-             if (islands !=null & useIslands) {
-                 // Проходим по островкам
-                 for (int i = 0; i < this.islands.size(); i++) {
+            if (islands !=null & useIslands) {
+                // Проходим по островкам
+                for (int i = 0; i < this.islands.size(); i++) {
 //  координаты клетки
-                     Point move = this.islands.get(i);
+                    Point move = this.islands.get(i);
 // Экранная координата X центра шарика
-                     float ballCenterX = offsetX + cellSize * islands.get(i).x + cellSize / 2;
+                    float ballCenterX = offsetX + cellSize * islands.get(i).x + cellSize / 2;
 // Экранная координата Y центра шарика
-                     float ballCenterY = offsetY + cellSize * islands.get(i).y + cellSize / 2;
+                    float ballCenterY = offsetY + cellSize * islands.get(i).y + cellSize / 2;
 // Рисуем шарик
-                     canvas.drawCircle(ballCenterX, ballCenterY, r, islandPaint);
+                    canvas.drawCircle(ballCenterX, ballCenterY, r, islandPaint);
 
-                 }
-             }
-
+                }
+            }
 // Проходим по ходам
             for (int i = 0; i < this.moves.size(); i++) {
 // Ход игрока, координаты клетки, где Х и Y от 0-9
@@ -475,7 +474,7 @@ public class BoardView extends View implements Runnable {
         // обновляем user interface (UI)
         this.updateUI();
     }
-// Создаем островки
+    // Создаем островки
     public ArrayList createIsland(){
         if (!useIslands & islands!=null){
             islands.clear();
@@ -484,14 +483,14 @@ public class BoardView extends View implements Runnable {
         // Создаем коллекцию островков
         islands = new ArrayList<>();
         // Получаем координаты пяти островков
-            for(int i = 0; i<5; i++) {
-                // Получаем рандомное число от 0 - 9 для x-координаты
-                int x = rand.nextInt(CELL_COUNT);
-                // Получаем рандомное число от 0 - 9 для y-координаты
-                int y = rand.nextInt(CELL_COUNT);
-                // Добавляем координаты в коллекцию
-                islands.add(new Point(x,y));
-            }
+        for(int i = 0; i<5; i++) {
+            // Получаем рандомное число от 0 - 9 для x-координаты
+            int x = rand.nextInt(CELL_COUNT);
+            // Получаем рандомное число от 0 - 9 для y-координаты
+            int y = rand.nextInt(CELL_COUNT);
+            // Добавляем координаты в коллекцию
+            islands.add(new Point(x,y));
+        }
 // вернем коллекцию из координат островков
         return islands;
     }
@@ -500,11 +499,11 @@ public class BoardView extends View implements Runnable {
         if(!useIslands){
             return;
         }
-        if(moves.size()%4 != 0){
+        if(moves.size() % 4 != 0){
             return;
         }
         // 50 раз пытаемся добавить случайную координату
-        for(int i = 0; i< 500;i++) {
+        for(int i = 0; i < 500 ; i++) {
             // Получаем случайную x-координату
             int x = rand.nextInt(CELL_COUNT);
             // Получаем случайную y-координату
@@ -522,12 +521,11 @@ public class BoardView extends View implements Runnable {
     }
     // Новая игра
     public void newGame() {
+        int idx = rand.nextInt(MainActivity.NewGameWords.length);
         // Добавим начинаем новую игру в отладочную информацию
-        Util.debug("Начинаем новую игру");
+        Util.debug(MainActivity.NewGameWords[idx]);
         // Создаем островки
-
-            createIsland();
-
+        createIsland();
         // Если есть ходы
         if (this.moves.size() > 0) {
             // Очищаем список ходов
@@ -560,10 +558,10 @@ public class BoardView extends View implements Runnable {
         if (winner == 0) {
             // Если заполнили все клетки поля
             if (this.moves.size() + this.islands.size() == CELL_COUNT * CELL_COUNT) {
-
+                String draw = getResources().getString(R.string.Draw);
+                Util.debug(draw);
                 // Возвращаем ничья
-                return getResources().getString(R.string.Draw);
-
+                return draw;
             }
             // Если игрок против компьютера
             if (this.isPlayerVsComputer) {
@@ -578,18 +576,23 @@ public class BoardView extends View implements Runnable {
         }
         // Если игрок против компьютера
         if (this.isPlayerVsComputer) {
-
-            // Возвращаем вы выиграли или вы проиграли
-            return winner == 1 ? getResources().getString(R.string.YouWon) : getResources().getString(R.string.YouLost);
-
+            if (winner == 1){
+                return getResources().getString(R.string.YouWon);
+            }
+            else{
+                return getResources().getString(R.string.YouLost);
+            }
         }
         // Иначе игрок против игрока
         else {
-            // Возвращаем выиграл 1 игрок или выиграл 2 игрок
-            return winner == 1 ? getResources().getString(R.string.WinPlayer1) : getResources().getString(R.string.WinPlayer2);
+            if (winner == 1){
+                return getResources().getString(R.string.WinPlayer1);
+            }
+            else{
+                return getResources().getString(R.string.WinPlayer2);
+            }
         }
     }
-
     // Метод для  потока вычисления хода компьютера
     @Override
     public void run() {
@@ -625,37 +628,36 @@ public class BoardView extends View implements Runnable {
             this.computerMoveThread = null;
         }
     }
-   public void setCellCount(int size){
+    public void setCellCount(int size){
         CELL_COUNT = size;
         moves.add(new Point(0,0));
         newGame();
-   }
-   // Вкл-выкл островки
-   public void islandsEnable(boolean enabled){
+    }
+    // Вкл-выкл островки
+    public void islandsEnable(boolean enabled){
         useIslands = enabled;
         // если в аргументах true
-      if (enabled){
-          createIsland();
-      }
-      // в аргументах false
-      else{
-          if (islands!=null) {
-              // Очищаем массив островов
-              islands.clear();
-          }
-      }
-       // перерисовываем
-       invalidate();
-   }
-   // Сколько клеток
+        if (enabled){
+            createIsland();
+        }
+        // в аргументах false
+        else {
+            if (islands!=null) {
+                // Очищаем массив островов
+                islands.clear();
+            }
+        }
+        // перерисовываем
+        invalidate();
+    }
+    // Сколько клеток
     public int getCellCount(){
-    return CELL_COUNT;
+        return CELL_COUNT;
     }
     // оно почему то всегда возращает true
     public boolean areIslandsEnabled(){
         islands.size();
         return (useIslands);
-
     }
     public void showAlertDialog(){
         // Запускаем обновление интерфейса в основном потоке приложения
@@ -664,7 +666,7 @@ public class BoardView extends View implements Runnable {
             public void run() {
                 //Ловим исключение
                 try {
-                showAlert2();
+                    showAlert2();
                 }
                 catch (Exception ex) {
                     // Показываем сообщение об ошибке с текстом исключения
@@ -674,33 +676,56 @@ public class BoardView extends View implements Runnable {
         });
     }
     // Показываем диалоговое окно с результатами игры
-    public void showAlert2(){
+    public void showAlert2() {
 // Создаем alertDialog
         String title = getResources().getString(R.string.GameResult);
+        int winner = getWinner();
         String message = getGameStatus();
-        if(getWinner()==0 & moves.size()+islands.size()!= CELL_COUNT*CELL_COUNT){return;}
+        if (winner == 0 & moves.size() + islands.size() != CELL_COUNT * CELL_COUNT) {
+            return;
+        }
+        int wi = rand.nextInt(MainActivity.WinArray.length);
+        int li = rand.nextInt(MainActivity.LoseArray.length);
+        // Если игрок против компьютера
+        if (this.isPlayerVsComputer) {
+            if (winner == 1) {
+                Util.debug(MainActivity.WinArray[wi]);
+            } else {
+                Util.debug(MainActivity.LoseArray[li]);
+            }
+        }
+        // Иначе игрок против игрока
+        else {
+            if (winner == 1) {
+                Util.debug(MainActivity.WinArray[wi]);
+            } else {
+                Util.debug(MainActivity.LoseArray[li]);
+            }
+        }
         AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.Instance);
         // Не ставим заголовок если он равен нулю иначе поставим
-        if (title!=null){alert.setTitle(title);}
+        if (title != null) {
+            alert.setTitle(title);
+        }
         // ВЫводим сообщение
         alert.setMessage(message);
         // Рисуем кнопку ок
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
-
             public void onClick(DialogInterface dialog, int which) {
-
             }
         });
         // создаем окно
-       alert.create().show();
+        alert.create().show();
     }
+
+
     public static void writeFile(){
         try {
             FileOutputStream fos = MainActivity.Instance.openFileOutput("sample.txt", MainActivity.Instance.MODE_PRIVATE);
             OutputStreamWriter osw = new OutputStreamWriter(fos);
             // записываем строку в файл
-            osw.write(MainActivity.Instance.getLevel()  + (useIslands ?"1":"0") + CELL_COUNT );
+            osw.write(MainActivity.Instance.getLevel()  + (useIslands ?"1":"0") + CELL_COUNT + (Util.useVoiceForDebug? "1":"0"));
             osw.flush();
             osw.close();
             fos.close();
@@ -712,16 +737,15 @@ public class BoardView extends View implements Runnable {
     }
     public static String readFile(){
         try {
-
-                FileInputStream fIn = MainActivity.Instance.openFileInput("sample.txt");
-                InputStreamReader isr = new InputStreamReader(fIn);
-                String s = MainActivity.Instance.getLevel() + (useIslands ? "1" : "0") + CELL_COUNT;
-                char[] inputBuffer = new char[s.length()];
-                isr.read(inputBuffer);
-                String readString = new String(inputBuffer);
-                fIn.close();
-                isr.close();
-                return readString;
+            FileInputStream fIn = MainActivity.Instance.openFileInput("sample.txt");
+            InputStreamReader isr = new InputStreamReader(fIn);
+            String s = MainActivity.Instance.getLevel() + (useIslands ? "1" : "0") + CELL_COUNT + (Util.useVoiceForDebug? "1":"0");
+            char[] inputBuffer = new char[s.length()];
+            isr.read(inputBuffer);
+            String readString = new String(inputBuffer);
+            fIn.close();
+            isr.close();
+            return readString;
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

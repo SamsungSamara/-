@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class Fragment3 extends DialogFragment {
 
-public TextView textView;
+    public TextView textView;
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -31,18 +31,12 @@ public TextView textView;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         return inflater.inflate(R.layout.fragment_3, container,false);
-
-
-
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
     public void loadRating() {
         // Запускаем обновление интерфейса в основном потоке приложения
@@ -51,10 +45,8 @@ public TextView textView;
             public void run() {
                 //Ловим исключение
                 try {
-
                     if (textView != null) {
-
-                       textView.setText("\n\n" + MainActivity.Instance.system());
+                        textView.setText(MainActivity.Instance.system());
                     }
 
                 }

@@ -181,7 +181,7 @@ public class ComputerMove {
                     // Получаем важность клетки
                     int score = getScore(x, y);
                     // Если стоит первый уровень (легкий)
-                    if (score > 150 & MainActivity.Instance.getLevel() == 1){
+                    if (score > 150 & MainActivity.Instance.getLevel() == 1) {
                         score = 150;
                     }
                     // Если важность еще лучше
@@ -200,7 +200,7 @@ public class ComputerMove {
             }
         }
         // Добавим лучшую важность и количество таких ходов в отладочную информацию
-        Util.debug("важность " + bestScore + " всего ходов " + possibleMoves.size());
+        // Util.debug("важность " + bestScore + " всего ходов " + possibleMoves.size());
         // Индекс случайного хода
         if (possibleMoves.size()>0) {
             int randomIndex = this.rand.nextInt(possibleMoves.size());
@@ -208,7 +208,7 @@ public class ComputerMove {
             // Случайный ход
             Point pmove = possibleMoves.get(randomIndex);
             // Добавим ход компьютера в отладочную информацию
-            Util.debug("Ход компьютера " + pmove.x + " " + pmove.y);
+            //Util.debug("Ход компьютера " + pmove.x + " " + pmove.y);
             // Возвращаем ход
             return pmove;
         }

@@ -47,6 +47,9 @@ public class Util {
             v.setY(y);
         }
     }
+    public static void enableVoice(boolean enabled){
+        useVoiceForDebug = enabled;
+    }
 
     // Показываем отладочную информацию
     public static void debug(String text) {

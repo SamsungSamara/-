@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/fragment1"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <Button
         android:id="@+id/button"
@@ -30,23 +30,36 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="@+id/fragment1"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="96dp"
+        android:layout_width="198dp"
+        android:layout_height="63dp"
         android:layout_weight="1"
         android:buttonTint="#081760"
         android:checked="false"
         android:drawableTint="#081760"
         android:onClick="onIslandsClick"
-        android:layout_marginBottom="50dp"
         android:text="Использовать островки"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="@+id/fragment1"
         app:layout_constraintStart_toStartOf="@+id/fragment1"
         app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="182dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:buttonTint="#081760"
+        android:checked="false"
+        android:drawableTint="#081760"
+        android:onClick="onSpeakClick"
+        android:text="Озвучивать"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
     <RadioGroup
         android:id="@+id/radiogroup"
@@ -143,13 +156,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="385dp" />
+        app:layout_constraintGuide_begin="436dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="338dp" />
+        app:layout_constraintGuide_begin="320dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

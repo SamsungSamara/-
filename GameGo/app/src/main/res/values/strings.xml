@@ -19,6 +19,12 @@
     <string name="Black">Черный</string>
     <string name="White">Белый</string>
     <string name="HelpText">Чтобы играть с другим игроком еще раз нажмите кнопку \"Новая\".\nДля изменения настроек нажмите \"Меню\" - \"Настройки\".\nДля отмены последнего хода нажмите кнопку \"Отмена\".</string>
+    <string name="CopyRight">\n© Анастасия Морозова, 2021\n</string>
+    <string name="WinArray">Вы выиграли| Вы победили| Вы молодец| Вы чемпион| партия выиграна| поздравляем с выигрышем| ура, Вы выиграли| я попробую отыграться</string>
+    <string name="LoseArray">Вы проиграли| увы, Вы проиграли| Вам не повезло| не печальтесь, в следующий раз выиграете| Вы проиграли, попробуйте еще раз| Вы неудачно закончили партию| партия проиграна| попробуйте отыграться</string>
+    <string name="GoodMove">Хороший ход</string>
+    <string name="NiceMove">Ого| вау</string>
+    <string name="NewGameWords">Начинаем новую игру| Давайте сразимся| начинаем новую партию| Давайте сыграем| Ну, начнем что ли</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
